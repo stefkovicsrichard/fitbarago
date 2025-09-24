@@ -6,3 +6,8 @@ function ora() {
 }
 ora()
 setInterval(ora, 1000);
+
+function toggletext(e) {
+  if (e.classList.contains("showing")) e.classList.remove("showing");
+  else e.classList.add("showing");
+}

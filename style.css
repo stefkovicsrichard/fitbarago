@@ -138,3 +138,11 @@ div[class="grid-container"] {
         height: 100%;
     }
 }
+
+.showing {
+    font-size: large !important; 
+}
+
+.emberek {
+    font-size: 0px;
+}
