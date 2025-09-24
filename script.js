@@ -2,7 +2,7 @@ const clock = document.getElementById("clock");
 var kep;
 var clicks = 0;
 var createdss = false;
-const kepek = ["assets/kata.jpg", "assets/richard.jpg"]
+const kepek = ["assets/ezigytufa.jpg"]
 
 function ora() {
   var ido = new Date().toLocaleString("hu-HU", {timeZone: "Europe/Budapest"});
