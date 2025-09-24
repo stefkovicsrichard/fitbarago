@@ -163,3 +163,21 @@ div[class="grid-container"] {
     width: fit-content;
     margin: auto;
 }
+
+/* TODO.HTML */
+
+#list {
+    background-color: black;
+    margin: auto;
+    width: 50%;
+    padding: 10px 10px;
+    list-style-position: outside;
+    border-radius: 10px;
+}
+
+.item {
+    background-color: darkslategray;
+    margin: 10px 20px;
+    padding: 5px;
+    border-radius: 4px;
+}
