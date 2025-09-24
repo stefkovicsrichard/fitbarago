@@ -84,10 +84,10 @@ main {
     text-align: justify;
 }
 
-h1, h2, h3 {
+/* h1, h2, h3 {
     margin-left: -15px;
     margin-bottom: 7px;
-}
+} */
 
 .space {
     padding-top: 20px;
@@ -139,10 +139,27 @@ div[class="grid-container"] {
     }
 }
 
-.showing {
+.showing, figcaption {
     font-size: large !important; 
 }
 
 .emberek {
-    font-size: 0px;
+    font-size: 0;
+}
+
+.emberek figure {
+    filter: grayscale(41%);
+    cursor: pointer;
+    transition: filter .15s ease-in-out;
+}
+
+.emberek figure:hover {
+    filter: grayscale(0%);
+    transition: filter .15s ease-in-out;
+}
+
+#kepek {
+    max-height: 450px;
+    width: fit-content;
+    margin: auto;
 }
