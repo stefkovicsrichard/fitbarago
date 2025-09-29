@@ -1,4 +1,3 @@
-// --- Initialize storage ---
 var tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
 var added = false;
 const main = document.querySelector('main');
@@ -6,12 +5,10 @@ const iname = document.getElementById('iname');
 const idesc = document.getElementById('idesc');
 var todos;
 
-// --- Main Save Routine ---
 function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-// --- Reordering ---
 function upe(e) {
     let index = tasks.indexOf(e);
     if (index > 0) {
@@ -32,20 +29,22 @@ function downe(e) {
 
 function done(e) {
 	let index = tasks.indexOf(e);
-	tasks[index].innerText = "✓"
+	tasks[index].checked = !tasks[index].checked
+	saveTasks();
+	updateul();
 }
 
-// --- Remove ---
 function dele(e) {
     tasks.splice(tasks.indexOf(e), 1);
     saveTasks();
     updateul();
 }
 
-// --- Add ---
 function add() {
     if (added) {
-        let obj = { name: iname.value, desc: idesc.value };
+        let obj = { name: iname.value, desc: idesc.value, checked: false };
+		iname.value = "";
+		idesc.value = "";
         tasks.push(obj);
         saveTasks();
         updateul();
@@ -54,11 +53,10 @@ function add() {
         todos.id = 'todos';
         main.appendChild(todos);
         added = true;
-				add()
+		add()
     }
 }
 
-// --- Render UI ---
 function updateul() {
 	if (!todos) {
 		todos = document.createElement('ul');
@@ -82,13 +80,13 @@ function updateul() {
 				</div>
 				<div class="col-xl-1 col-lg-2 col-md-3 container text-center">
 					<div class="row">
-						<div class="col-12"><a onclick="upe(tasks[${tasks.indexOf(e)}])">▲</a><a onclick="downe(tasks[${tasks.indexOf(e)}])">▼</a>
+						<div class="col-12"><span onclick="upe(tasks[${tasks.indexOf(e)}])">▲</span><span onclick="downe(tasks[${tasks.indexOf(e)}])">▼</span>
 					</div>
 					<div class="row">
-						<div class="col-12"><a onclick="done(tasks[${tasks.indexOf(e)}])">o</a></div>
+						<div class="col-12"><span onclick="done(tasks[${tasks.indexOf(e)}])" class="checkthingamajig">${e.checked?"✓":"o"}</span></div>
 					</div>
 					<div class="row">
-						<div class="col-12"><a onclick="dele(tasks[${tasks.indexOf(e)}])">x</a>
+						<div class="col-12"><span onclick="dele(tasks[${tasks.indexOf(e)}])">x</span></div>
 					</div>
 				</div>
 			</div>
@@ -96,5 +94,4 @@ function updateul() {
 	});
 }
 
-// --- Load existing on page load ---
 window.onload = updateul;
