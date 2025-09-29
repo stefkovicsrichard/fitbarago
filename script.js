@@ -2,7 +2,7 @@ const clock = document.getElementById("clock");
 var kep;
 var clicks = 0;
 var createdss = false;
-const kepek = ["assets/ezigytufa.jpg"]
+const kepek = ["assets/ezigytufa.jpg", "assets/dunakanyar.jpg", "assets/duranda.jpg", "assets/beijing.jpg", "assets/rigby.jpg"]
 
 function ora() {
   var ido = new Date().toLocaleString("hu-HU", {timeZone: "Europe/Budapest"});
@@ -23,6 +23,9 @@ function kepgen() {
     else clicks++
   } else {
     var div = document.getElementById("slideshow");
+    // let div2 = document.createElement("div");
+    // div2.id = "keptartodoboz";
+    // div.appendChild(div2);
     kep = document.createElement("img");
     kep.id = "kepek"
     div.appendChild(kep);
