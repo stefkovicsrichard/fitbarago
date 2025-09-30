@@ -2,14 +2,14 @@ const clock = document.getElementById("clock");
 var kep;
 var clicks = 0;
 var createdss = false;
-const kepek = ["assets/ezigytufa.jpg", "assets/dunakanyar.jpg", "assets/duranda.jpg", "assets/beijing.jpg", "assets/rigby.jpg"]
+const kepek = ["assets/ezigytufa.jpg", "assets/dunakanyar_upscaled.jpg", "assets/duranda.jpg", "assets/beijing.jpg", "assets/rigby_upscaled.jpg"]
 
 function ora() {
   var ido = new Date().toLocaleString("hu-HU", {timeZone: "Europe/Budapest"});
   clock.innerText = `Aktuális dátum/idő:\n${ido}`;
 }
 ora()
-setInterval(ora, 1000);
+setInterval(ora, 500);
 
 function toggletext(e) {
   if (e.classList.contains("showing")) e.classList.remove("showing");

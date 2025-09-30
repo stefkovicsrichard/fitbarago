@@ -74,19 +74,19 @@ function updateul() {
 		todos.innerHTML += `
 		<li class="item container">
 			<div class="row">
-				<div class="col-xl-11 col-lg-10 col-md-9">
+				<div class="col-xl-10 col-lg-9 col-md-8">
 					<h3>${e.name}</h3>
 					<p>${e.desc}</p>
 				</div>
 				<div class="col-xl-1 col-lg-2 col-md-3 container text-center">
 					<div class="row">
-						<div class="col-12"><span onclick="upe(tasks[${tasks.indexOf(e)}])">▲</span><span onclick="downe(tasks[${tasks.indexOf(e)}])">▼</span>
+						<div class="col-6 thingamajig" onclick="upe(tasks[${tasks.indexOf(e)}])">▲</div><div class="col-6 thingamajig" onclick="downe(tasks[${tasks.indexOf(e)}])">▼</div>
 					</div>
 					<div class="row">
-						<div class="col-12"><span onclick="done(tasks[${tasks.indexOf(e)}])" class="checkthingamajig">${e.checked?"✓":"o"}</span></div>
+						<div class="col-12 thingamajig" onclick="done(tasks[${tasks.indexOf(e)}])">${e.checked?"✓":"o"}</div>
 					</div>
 					<div class="row">
-						<div class="col-12"><span onclick="dele(tasks[${tasks.indexOf(e)}])">x</span></div>
+						<div class="col-12 thingamajig" onclick="dele(tasks[${tasks.indexOf(e)}])">x</div>
 					</div>
 				</div>
 			</div>

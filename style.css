@@ -137,10 +137,28 @@ div[class="grid-container"] {
         width: 50%;
         height: 100%;
     }
+
+    main {
+        padding: 0 0 0 0;
+    }
+}
+
+.row:first-child img {
+    max-height: 350px;
 }
 
 .showing, figcaption {
     font-size: large !important; 
+}
+
+figcaption {
+    border: #00fefc;
+    transition: font-size .1s ease-in-out;
+}
+
+figcaption:hover {
+    font-size: larger;
+    transition: font-size .1s ease-in-out;
 }
 
 .emberek {
@@ -177,24 +195,35 @@ div[class="grid-container"] {
 
 
 .item {
-    background-color: darkslategray;
+    background-color: #2f4f4f;
     margin: 10px auto;
     padding: 5px;
     width: 90%;
     border-radius: 4px;
+    transition: background-color .05s ease-in-out;
 }
 
-.checkthingamajig {
+.item:hover {
+    background-color: #3d7a7a;
+    transition: background-color .05s ease-in-out;
+}
+
+.thingamajig {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    text-align: center;
+    transition: color .1s ease-in-out;
+    font-size: larger;
 }
 
-.checkthingamajig:hover {
+.thingamajig:hover {
     cursor: pointer;
+    color: hotpink ;
+    transition: color .1s ease-in-out;
 }
 
 #li div {
