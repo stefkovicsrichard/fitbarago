@@ -15,6 +15,7 @@ body {
 
 * {
     color: #ffffff;
+    box-sizing: border-box;
 }
 
 footer p {
@@ -139,7 +140,8 @@ div[class="grid-container"] {
     }
 
     main {
-        padding: 0 0 0 0;
+        padding: 0;
+        margin: 0;
     }
 }
 
@@ -152,11 +154,17 @@ div[class="grid-container"] {
 }
 
 figcaption {
-    border: #00fefc;
+    width: fit-content;
+    border: #00000000 solid 2px;
+    margin: 0.33em auto;
+    padding: 0.15em;
+    display: block;
     transition: font-size .1s ease-in-out;
 }
 
 figcaption:hover {
+    border: #00fefc solid 2px;
+    border-radius: 6.5px;
     font-size: larger;
     transition: font-size .1s ease-in-out;
 }
@@ -201,6 +209,7 @@ figcaption:hover {
     width: 90%;
     border-radius: 4px;
     transition: background-color .05s ease-in-out;
+    word-wrap: break-word;
 }
 
 .item:hover {
@@ -234,4 +243,12 @@ figcaption:hover {
 .icon:hover {
     filter: hue-rotate(0.5turn);
     transition: filter 0.2s ease-in-out;
+}
+
+.ngodsjngsdkfjsd {
+    margin-bottom: 7px;
+}
+
+ul {
+    list-style: none;
 }
